@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090705">
+<meta name="description" content="The Wedding of Hadi & Riya — Royal Palace">
+<title>Hadi & Riya | Royal Palace Wedding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090705;--gold:#d8b56a;--gold2:#f4df9b;--cream:#f7f0df;--muted:#c7bda9;--line:rgba(216,181,106,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Montserrat,sans-serif;font-weight:300;overflow-x:hidden}
+body.lock{overflow:hidden}.serif{font-family:"Cormorant Garamond",serif}.gold{color:var(--gold2)}
+section{position:relative;padding:88px 20px;max-width:1100px;margin:auto}.eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:10px;color:var(--gold);text-align:center}.title{font:600 clamp(38px,8vw,72px)/.9 "Cormorant Garamond",serif;text-align:center;margin:12px 0 18px}.sub{text-align:center;color:var(--muted);font-size:12px;line-height:1.9;max-width:650px;margin:auto}
+#opening{position:fixed;inset:0;z-index:1000;background:#080604;display:grid;place-items:center;overflow:hidden;transition:opacity 1s,visibility 1s}
+#opening.hide{opacity:0;visibility:hidden;pointer-events:none}.gate{position:absolute;top:0;width:50%;height:100%;background:linear-gradient(90deg,#050403,#16110b);z-index:2;border:1px solid rgba(216,181,106,.25);transition:transform 1.8s cubic-bezier(.77,0,.18,1)}
+.gate.left{left:0;border-right:2px solid var(--gold)}.gate.right{right:0;border-left:2px solid var(--gold)}
+#opening.open .left{transform:translateX(-100%)}#opening.open .right{transform:translateX(100%)}
+.gate:after{content:"♛";position:absolute;top:50%;font-size:85px;color:rgba(216,181,106,.22);transform:translateY(-50%)}.left:after{right:28px}.right:after{left:28px}
+.cover{position:relative;z-index:3;text-align:center;padding:25px}.crown{font-size:28px;color:var(--gold);margin-bottom:14px}.cover h1{font:600 clamp(62px,15vw,125px)/.72 "Cormorant Garamond",serif;margin:0}.cover .amp{font-size:.48em;color:var(--gold);vertical-align:middle}.cover p{font-size:10px;letter-spacing:.35em;color:var(--muted);margin:28px 0}
+.btn{border:1px solid var(--gold);background:linear-gradient(135deg,rgba(216,181,106,.15),rgba(216,181,106,.03));color:var(--cream);padding:13px 24px;border-radius:999px;letter-spacing:.18em;text-transform:uppercase;font-size:10px;cursor:pointer}
+.hero{min-height:100svh;display:grid;place-items:end center;padding:0;overflow:hidden}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.52);animation:zoom 12s ease-in-out infinite alternate}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,#090705 100%)}.heroText{position:relative;z-index:2;text-align:center;padding:60px 20px}.heroText h1{font:600 clamp(58px,14vw,120px)/.72 "Cormorant Garamond",serif;margin:15px 0}.heroText p{color:var(--muted);letter-spacing:.25em;font-size:10px}@keyframes zoom{to{transform:scale(1.08)}}
+.divider{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px auto}
+.couple{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:42px}.person{text-align:center}.person img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:150px 150px 12px 12px;border:1px solid var(--line);padding:5px;background:#0f0c08}.person h3{font:600 38px "Cormorant Garamond",serif;margin:15px 0 5px}.person p{color:var(--muted);font-size:10px;line-height:1.8}
+.quote{margin-top:30px;padding:28px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(216,181,106,.08),transparent);text-align:center;font:italic 22px/1.5 "Cormorant Garamond",serif}.quote small{display:block;font:10px Montserrat;color:var(--gold);letter-spacing:.15em;margin-top:12px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:35px auto;max-width:650px}.time{border:1px solid var(--line);padding:18px 4px;text-align:center;background:#0e0b08}.time b{font:600 35px "Cormorant Garamond",serif;display:block;color:var(--gold2)}.time span{font-size:8px;color:var(--muted);letter-spacing:.1em}
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:35px}.card{border:1px solid var(--line);padding:30px 20px;text-align:center;background:linear-gradient(145deg,rgba(216,181,106,.08),rgba(0,0,0,.08));border-radius:4px}.card h3{font:600 32px "Cormorant Garamond",serif;color:var(--gold2);margin:8px}.card p{font-size:11px;line-height:1.9;color:var(--muted)}.maps{display:inline-block;margin-top:10px;color:var(--gold2);font-size:10px;text-decoration:none;border-bottom:1px solid var(--gold)}
+.timeline{max-width:720px;margin:35px auto}.story{border-left:1px solid var(--gold);padding:0 0 28px 25px;margin-left:10px}.story h3{font:600 28px "Cormorant Garamond",serif;margin:0;color:var(--gold2)}.story p{color:var(--muted);font-size:11px;line-height:1.8}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:35px}.gallery button{padding:0;border:0;background:none;cursor:pointer;overflow:hidden;aspect-ratio:1}.gallery img{width:100%;height:100%;object-fit:cover;transition:.5s}.gallery button:hover img{transform:scale(1.08)}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:2000;display:none;place-items:center;padding:20px}#lightbox.show{display:grid}#lightbox img{max-width:95vw;max-height:85vh;object-fit:contain}.close{position:absolute;top:20px;right:20px;color:#fff;font-size:32px;background:none;border:0;cursor:pointer}
+.form{max-width:650px;margin:35px auto}.field{width:100%;padding:14px;margin:6px 0;background:#100c08;border:1px solid var(--line);color:#fff;border-radius:4px;font-family:inherit}.gift{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:35px}.account{border:1px solid var(--line);padding:25px;text-align:center}.account strong{display:block;font:600 24px "Cormorant Garamond",serif;color:var(--gold2);margin:8px}.account code{font-size:16px;color:#fff}.copy{margin-top:15px}.closing{text-align:center;min-height:65vh;display:grid;place-items:center}.closing h2{font:600 clamp(55px,12vw,105px)/.75 "Cormorant Garamond",serif;margin:15px}
+#music{position:fixed;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;z-index:100;background:#17110a;border:1px solid var(--gold);color:var(--gold2);cursor:pointer}
+@media(max-width:650px){section{padding:70px 16px}.couple,.events,.gift{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.cover h1{font-size:70px}.person img{max-width:290px;margin:auto}.person{display:flex;flex-direction:column;align-items:center}}
+</style>
+</head>
+<body class="lock">
+
+<div id="opening">
+  <div class="gate left"></div><div class="gate right"></div>
+  <div class="cover">
+    <div class="crown">♛</div>
+    <div class="eyebrow">The Wedding Of</div>
+    <h1>Hadi <span class="amp">&</span> Riya</h1>
+    <p id="guest">Kepada Yth. Tamu Undangan</p>
+    <button class="btn" id="openBtn">Buka Undangan</button>
+  </div>
+</div>
+
+<main>
+<section class="hero">
+  <img src="1.jpg" alt="Hadi & Riya">
+  <div class="heroText">
+    <div class="eyebrow">A Royal Celebration</div>
+    <h1>Hadi <span class="gold">&</span> Riya</h1>
+    <p>12 • 12 • 2026</p>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">The Groom & The Bride</div>
+  <h2 class="title">Mempelai</h2>
+  <div class="divider"></div>
+  <div class="couple">
+    <article class="person">
+      <img src="Hadi.jpg" alt="Hadianto Kurniawan Tan">
+      <h3>Hadianto Kurniawan Tan</h3>
+      <p>Putra Bpk Tan Tjoen Hwa & Ibu Tjhin Tjhiu loe</p>
+    </article>
+    <article class="person">
+      <img src="R2.jpg" alt="Ilmi Riadoh">
+      <h3>Ilmi Riadoh</h3>
+      <p>Putri dari Alm Bpk Muhammad Saleh & Ibu Nuralam Rangkuti</p>
+    </article>
+  </div>
+  <div class="quote">“Setiap pertemuan memiliki alasan untuk dikenang. Dua insan dipertemukan, menumbuhkan rasa, kepercayaan, dan keyakinan untuk melangkah bersama. Kini, sebuah babak baru dimulai—menjaga cinta, merangkai kenangan, dan berjalan berdampingan menuju selamanya.”</div>
+</section>
+
+<section>
+  <div class="eyebrow">Save The Date</div>
+  <h2 class="title">Menuju Hari Bahagia</h2>
+  <div class="count">
+    <div class="time"><b id="days">0</b><span>HARI</span></div>
+    <div class="time"><b id="hours">0</b><span>JAM</span></div>
+    <div class="time"><b id="minutes">0</b><span>MENIT</span></div>
+    <div class="time"><b id="seconds">0</b><span>DETIK</span></div>
+  </div>
+  <p class="sub">Sabtu, 12 Desember 2026</p>
+</section>
+
+<section>
+  <div class="eyebrow">Wedding Ceremony</div>
+  <h2 class="title">Pemberkatan</h2>
+  <div class="events">
+    <div class="card"><div class="eyebrow">PEMBERKATAN</div><h3>11.00 WIB</h3><h3>12 Desember 2026</h3></div>
+    <div class="card"><div class="eyebrow">LOKASI</div><h3>VIHARA SILA PARAMITA</h3><p>Jl. Cipinang Jaya Raya No.1, RT.9/RW.7, Cipinang Besar Sel., Kecamatan Jatinegara, Kota Jakarta Timur.</p><a class="maps" href="https://share.google/Dbk8LwzLf7eEOqJJY" target="_blank" rel="noopener">Lihat Lokasi</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Our Journey</div>
+  <h2 class="title">Kisah Cinta</h2>
+  <div class="timeline">
+    <div class="story"><h3>Awal Pertemuan</h3><p>“Di antara begitu banyak manusia yang hadir dalam perjalanan hidup, takdir memilih untuk mempertemukan kami. Sebuah pertemuan yang sederhana berubah menjadi kisah cinta yang indah, hingga akhirnya kami memilih untuk mengabadikannya dalam ikatan pernikahan.”</p></div>
+    <div class="story"><h3>Menjadi Kita</h3><p>Dua hati yang dipertemukan,<br>Dua cerita yang dipersatukan,<br>Hingga akhirnya,<br>bukan lagi tentang aku dan kamu,<br>tapi tentang kita.</p></div>
+    <div class="story"><h3>Menuju Selamanya</h3><p>Dan di hari ini,<br>Kita melangkah bersama,<br>Menuju selamanya.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Captured Moments</div>
+  <h2 class="title">Galeri</h2>
+  <div class="gallery">
+    <button><img src="4.jpg" alt="Prewedding 1"></button>
+    <button><img src="5.jpg" alt="Prewedding 2"></button>
+    <button><img src="6.jpg" alt="Prewedding 3"></button>
+    <button><img src="7.jpg" alt="Prewedding 4"></button>
+    <button><img src="8.jpg" alt="Prewedding 5"></button>
+    <button><img src="9.jpg" alt="Prewedding 6"></button>
+    <button><img src="91.jpg" alt="Prewedding 7"></button>
+    <button><img src="92.jpg" alt="Prewedding 8"></button>
+    <button><img src="93.jpg" alt="Prewedding 9"></button>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Please Join Us</div>
+  <h2 class="title">RSVP</h2>
+  <p class="sub">Konfirmasi kehadiran melalui WhatsApp Hadi atau Riya.</p>
+  <form class="form" id="rsvpForm">
+    <input class="field" id="name" required placeholder="Nama">
+    <select class="field" id="attendance" required><option value="">Konfirmasi kehadiran</option><option>Hadir</option><option>Tidak hadir</option></select>
+    <input class="field" id="countGuests" type="number" min="1" max="10" value="1" placeholder="Jumlah tamu">
+    <textarea class="field" id="message" rows="4" placeholder="Ucapan untuk Hadi & Riya"></textarea>
+    <button class="btn" type="submit">Kirim RSVP</button>
+  </form>
+</section>
+
+<section>
+  <div class="eyebrow">Wedding Gift</div>
+  <h2 class="title">Tanda Kasih</h2>
+  <div class="gift">
+    <div class="account"><div class="eyebrow">Bank</div><h3>Hadianto Kurniawan Tan</h3><strong>4960141968</strong><code>BCA</code><br><button type="button" class="btn copy" data-copy="4960141968">Salin Nomor</button></div>
+    <div class="account"><div class="eyebrow">Bank</div><h3>Ilmi Riadoh</h3><strong>2680150420</strong><code>BCA</code><br><button type="button" class="btn copy" data-copy="2680150420">Salin Nomor</button></div>
+  </div>
+</section>
+
+<section class="closing">
+  <div><div class="crown">♛</div><div class="eyebrow">Thank You</div><h2>Hadi <span class="gold">&</span> Riya</h2><p class="sub">Merupakan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.</p></div>
+</section>
+</main>
+
+<div id="lightbox"><button class="close" aria-label="Tutup">×</button><img id="lightImg" src="" alt="Galeri"></div>
+<button id="music" aria-label="Musik">♫</button>
+<audio id="audio" loop preload="none" src="music.mp3"></audio>
+
+<script>
+const opening=document.getElementById('opening');
+const openBtn=document.getElementById('openBtn');
+const audio=document.getElementById('audio');
+
+openBtn.onclick=()=>{
+  opening.classList.add('open');
+  document.body.classList.remove('lock');
+  setTimeout(()=>opening.classList.add('hide'),1900);
+  audio.play().catch(()=>{});
+};
+
+const params=new URLSearchParams(location.search);
+const guest=params.get('to')||params.get('nama')||params.get('guest');
+if(guest){
+  document.getElementById('guest').textContent='Kepada Yth. '+guest.replace(/\+/g,' ');
+}
+
+const target=new Date('2026-12-12T09:00:00+07:00').getTime();
+function tick(){
+  let d=Math.max(0,target-Date.now());
+  document.getElementById('days').textContent=Math.floor(d/86400000);
+  d%=86400000;
+  document.getElementById('hours').textContent=Math.floor(d/3600000);
+  d%=3600000;
+  document.getElementById('minutes').textContent=Math.floor(d/60000);
+  d%=60000;
+  document.getElementById('seconds').textContent=Math.floor(d/1000);
+}
+tick();
+setInterval(tick,1000);
+
+const lightbox=document.getElementById('lightbox');
+const lightImg=document.getElementById('lightImg');
+
+document.querySelectorAll('.gallery button').forEach(b=>{
+  b.onclick=()=>{
+    lightImg.src=b.querySelector('img').src;
+    lightbox.classList.add('show');
+  };
+});
+document.querySelector('#lightbox .close').onclick=()=>lightbox.classList.remove('show');
+lightbox.onclick=e=>{
+  if(e.target===lightbox)lightbox.classList.remove('show');
+};
+
+document.querySelectorAll('.copy').forEach(b=>{
+  b.onclick=async()=>{
+    try{
+      await navigator.clipboard.writeText(b.dataset.copy);
+    }catch(err){
+      const ta=document.createElement('textarea');
+      ta.value=b.dataset.copy;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+    }
+    const old=b.textContent;
+    b.textContent='Tersalin ✓';
+    setTimeout(()=>b.textContent=old,1400);
+  };
+});
+
+document.getElementById('music').onclick=()=>{
+  if(audio.paused){
+    audio.play().catch(()=>{});
+    document.getElementById('music').textContent='♫';
+  }else{
+    audio.pause();
+    document.getElementById('music').textContent='♪';
+  }
+};
+
+document.getElementById('rsvpForm').onsubmit=e=>{
+  e.preventDefault();
+  const n=document.getElementById('name').value.trim();
+  const a=document.getElementById('attendance').value;
+  const c=document.getElementById('countGuests').value;
+  const m=document.getElementById('message').value.trim();
+  const text=[
+    'Halo Hadi/Riya, saya '+n+'.',
+    '',
+    'Konfirmasi: '+a,
+    'Jumlah tamu: '+c,
+    'Ucapan: '+(m||'-'),
+    '',
+    'Dari undangan pernikahan Hadi & Riya.'
+  ].join('\n');
+  const who=confirm('Kirim RSVP ke Hadi?\nPilih OK = Hadi, Batal = Riya');
+  location.href='https://wa.me/'+(who?'6285143475535':'6281212000347')+'?text='+encodeURIComponent(text);
+};
+</script>
+</body>
+</html>
